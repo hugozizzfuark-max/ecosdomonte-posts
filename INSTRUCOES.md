@@ -9,12 +9,19 @@ Cada execução agendada publica **um** post no Instagram @ecosdomonte (conta Wi
 - **Horário 19h — "Oração da noite"** (ou "Oração para hoje", "Uma oração para você"): oração curta em primeira pessoa (35 a 55 palavras), terminando em "Amém." Escreva a oração com palavras próprias; sem referência na arte.
 - Nunca repita versículo ou tema dos últimos 14 dias: consulte `posts/historico.csv` antes de escrever.
 
-## Legenda (até ~900 caracteres)
-1. Primeira linha forte que puxe a leitura (ex.: "Se hoje o seu coração está pesado, leia isto.").
-2. Reflexão curta de 3 a 5 frases ligando o texto à vida real.
-3. Convite simples para interação, sem pedir "comente Amém": ex. "Salve para reler quando precisar" ou "Envie para alguém que precisa ouvir isso hoje".
-4. Chamada para o programa, em 1 a 2 frases, variando o texto: "✨ Se você está atravessando um tempo de dor, o recomeço de 21 dias *Depois da Dor, Deus* foi feito para você. Link na bio."
-5. De 5 a 8 hashtags em português: misture amplas (#fé #deus #oração #devocional) e específicas (#oraçãodanoite #palavradedeus #recomeço #mulheresdefé).
+## Legenda (formato da dona da conta, ~1.200 a 1.600 caracteres)
+Siga esta estrutura, que é a que ela já usa e que teve bom resultado:
+1. Primeira linha fixa, sempre igual: `Não vamos aparecer para você de novo :/ Nos siga para acompanhar nossas reflexões e comentários!`
+2. Parágrafo que nomeia a dor do leitor em linguagem concreta (ex.: "os planos que falharam, as decepções que nos feriram e a ansiedade que insiste em nos acompanhar") e a crença errada que vem com ela.
+3. A virada: o que Deus faz com isso, trazendo o versículo do dia entre aspas curvas com a referência ("Em Jeremias 18:4, a Palavra nos mostra...: “...”"). No post da oração, cite um versículo ligado ao tema da oração.
+4. Parágrafo de consolo e aplicação, fechando com uma frase de esperança forte (ex.: "A sua dor não é o fim da sua história, é apenas a matéria-prima para o seu recomeço.").
+5. Ponte para a oferta: "Se você sente que precisa de ajuda para ..., você não precisa fazer esse percurso sozinha."
+6. Bloco da oferta, sempre nestas três linhas (pode variar levemente as palavras):
+   `✨ Conheça o Devocional Digital "Depois da Dor, Deus".`
+   `Um guia diário de 21 dias para te ajudar a superar a ansiedade, encontrar restauração interior e reconstruir a sua fé com esperança.`
+   `👉 Clique no link da minha bio para garantir o seu acesso e começar a sua transformação hoje mesmo. 🕊️`
+7. Linha em branco e 5 hashtags, sempre incluindo #devocional #oracao e mais 3 entre: #deusnocomando #deusébomotempotodo #deuséfiel #fé #palavradedeus #recomeço.
+Parágrafos separados só por quebra de linha simples. Fale com o leitor no feminino quando for direto a ele ("sozinha").
 
 ## Passo a passo
 1. Ligue o repositório com `add_repo` (owner `hugozizzfuark-max`, repo `ecosdomonte-posts`, access `push`) e clone-o.
