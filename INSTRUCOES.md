@@ -5,8 +5,12 @@ Cada execução agendada publica **um** post no Instagram @ecosdomonte (conta Wi
 ## Linha editorial
 - Perfil cristão de fé, reflexões e devocional. Público majoritariamente feminino, maduro (muitas 55+), passando por dias difíceis.
 - Tom: acolhedor, simples, esperançoso. Nada de julgamento, medo ou promessas de prosperidade. Português do Brasil.
+São 4 posts por dia, cada horário com seu formato:
+- **Horário 8h — "Oração da manhã"** (ou "Bom dia com Deus"): oração curta de entrega do dia, em primeira pessoa (30 a 50 palavras), terminando em "Amém." Palavras próprias; sem referência na arte.
 - **Horário 12h — "Palavra do meio-dia":** um versículo bíblico curto (no máximo ~30 palavras), com referência. Temas: consolo, força, recomeço, cuidado de Deus, ansiedade, perdão, gratidão.
-- **Horário 19h — "Oração da noite"** (ou "Oração para hoje", "Uma oração para você"): oração curta em primeira pessoa (35 a 55 palavras), terminando em "Amém." Escreva a oração com palavras próprias; sem referência na arte.
+- **Horário 16h — "Reflexão da tarde"** (ou "Para o seu coração"): uma frase de impacto original, curta (10 a 25 palavras), que fale direto com quem está passando por um tempo difícil (ex.: "Deus não desperdiça nenhuma lágrima que você chorou diante dEle."). Sem referência na arte; o versículo relacionado vai na legenda.
+- **Horário 20h — "Oração da noite"** (ou "Oração para hoje", "Uma oração para você"): oração curta em primeira pessoa (35 a 55 palavras), terminando em "Amém." Palavras próprias; sem referência na arte.
+- Os quatro posts do mesmo dia devem ter temas diferentes entre si.
 - Nunca repita versículo ou tema dos últimos 14 dias: consulte `posts/historico.csv` antes de escrever.
 
 ## Legenda (formato da dona da conta, ~1.200 a 1.600 caracteres)
@@ -27,7 +31,7 @@ Parágrafos separados só por quebra de linha simples. Fale com o leitor no femi
 1. Ligue o repositório com `add_repo` (owner `hugozizzfuark-max`, repo `ecosdomonte-posts`, access `push`) e clone-o.
 2. Leia `posts/historico.csv`.
 3. Escreva título, texto da arte, referência (só às 12h) e legenda conforme acima.
-4. Gere a arte: `python3 gerar_arte.py --titulo "..." --texto "..." --referencia "..." --paleta N --saida posts/AAAA-MM-DD-HHh.jpg`. Use N = (dia do ano × 2 + 0 para 12h ou 1 para 19h) mod 5, para alternar as cores. Abra a imagem e confira se o texto está legível e nada foi cortado.
+4. Gere a arte: `python3 gerar_arte.py --titulo "..." --texto "..." --referencia "..." --paleta N --saida posts/AAAA-MM-DD-HHh.jpg`. Use N = (dia do ano × 4 + S) mod 5, com S = 0 às 8h, 1 às 12h, 2 às 16h e 3 às 20h, para alternar as cores. Abra a imagem e confira se o texto está legível e nada foi cortado.
 5. Acrescente a linha em `posts/historico.csv` com status `gerado`, faça commit e push para `main`.
 6. Monte a URL pública fixa pelo SHA do commit: `https://raw.githubusercontent.com/hugozizzfuark-max/ecosdomonte-posts/<SHA>/posts/<arquivo>.jpg` e confirme com `curl -sI` que responde 200 e `image/jpeg`.
 7. Publique com Windsor `execute_action`: conector `instagram`, conta `17841425594595406`, ação `create_image_post`, params `{image_url, caption}`.
